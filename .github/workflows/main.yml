@@ -26,13 +26,6 @@ jobs:
           cd emsdk
           ./emsdk install latest
           ./emsdk activate latest
-          echo "source $(pwd)/emsdk_env.sh" >> $GITHUB_ENV
-
-      - name: Set up Emscripten environment
-        run: |
-          source emsdk/emsdk_env.sh
-          echo "EMSDK active"
-        shell: bash
 
       - name: Build Flycast with Emscripten
         run: |
