@@ -35,7 +35,7 @@ jobs:
           mkdir build && cd build
           
           # Emscriptenを使ってビルド
-          emcmake cmake .. -DCMAKE_TOOLCHAIN_FILE=$EMSCRIPTEN/cmake/Modules/Platform/Emscripten.cmake -DCMAKE_CROSSCOMPILING_EMULATOR=$EMSDK_NODE 
+          emcmake cmake .. -DCMAKE_TOOLCHAIN_FILE=$EMSCRIPTEN/cmake/Modules/Platform/Emscripten.cmake -DCMAKE_CROSSCOMPILING_EMULATOR=$EMSDK_NODE -DCMAKE_MAKE_PROGRAM=/usr/bin/make
           emmake make
 
         shell: bash
