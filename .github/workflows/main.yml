@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y git cmake python3
+          sudo apt-get install -y git cmake python3 gcc g++
 
       - name: Clone and install Emscripten SDK
         run: |
